@@ -15,10 +15,10 @@
    ```
    # sudo insmod calc.ko operand1=2 operand2=1,2,3,4,5 operator=add
    # cat /proc/<ID>/calc
-   2,3,4,5,6
+   3,4,5,6,7
    # echo 3 > /proc/<ID>/calc
    # cat /proc/<ID>/calc
-   3,4,5,6,7
+   4,5,6,7,8
    # sudo rmmod calc
    # sudo insmod calc.ko operand1=2 operand2=1,2,3,4,5 operator=mul
    # cat /proc/<ID>/calc
@@ -47,6 +47,7 @@
 4. 模块退出的时候不要忘了把创建的 proc 文件和文件夹都删除掉。
 5. 实现简易 ps 程序所需要的 proc 文件有 `/proc/<PID>/cmdline` 和 `/proc/PID/stat`。对于部分进程，其 cmdline 文件为空，此时可输出 `/proc/<PID>/comm` 文件中的内容。
 6. 可以从模版代码出发。
+6. 可以参考 https://sysprog21.github.io/lkmpg/#the-proc-file-system 进行模块编写，参考 https://man7.org/linux/man-pages/man5/proc.5.html 了解 proc 中各个文件的作用
 
 ## 实验提交
 
