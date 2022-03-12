@@ -1,0 +1,9 @@
+{
+    "makefile.extensionOutputFolder": "./.vscode",
+    "files.associations": {
+        "*.sql": "sql",
+        "*.html": "html",
+        "module.h": "c",
+        "dirent.h": "c"
+    }
+}
