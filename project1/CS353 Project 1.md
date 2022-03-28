@@ -41,6 +41,7 @@
 
 ## 实验提示
 
+1. 课堂上介绍的关于proc的各种函数需要内核版本在 5.6 以上，否则编译时会出现类似 `variable 'ops' has inittializer but incomplete type` 的错误。如果你使用了 5.6 以下版本并解决了该问题，**请在实验报告中阐述你的解决方法**。
 1. 如果slides中的内容不够充足，可以参考 https://sysprog21.github.io/lkmpg/#the-proc-file-system 进行模块编写，参考 https://man7.org/linux/man-pages/man5/proc.5.html 了解 proc 中各个文件的作用，网站 https://elixir.bootlin.com/linux/latest/source 可以方便阅读 linux 内核源码。
 1. 实现模块的读写函数时，若要读取用户写入的内容，要先使用 `copy_from_user` 函数将用户缓存复制到内核空间中；若要将内容写入用户缓存，则要使用 `copy_to_user` 将内核空间内容复制过去。这两个函数定义在头文件 `linux/uaccess.h` 中。
 2. 模块参数传递用到的宏定义在头文件 `linux/moduleparam.h` 中，注意普通参数和数组参数使用的宏是不同的，可以阅读头文件中的注释来进一步了解这些宏。注意宏 `module_param_array` 中第三个参数的作用（https://elixir.bootlin.com/linux/latest/source/include/linux/moduleparam.h#L487）。
