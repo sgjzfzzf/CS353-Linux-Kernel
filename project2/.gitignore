@@ -1,0 +1,7 @@
+*
+
+!*.h
+!*.c
+!.gitignore
+!*.md
+!img/
