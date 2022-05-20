@@ -16,11 +16,7 @@
                 "/usr/src/linux-headers-5.13.0-41-generic/ubuntu/include",
                 "/usr/lib/gcc/x86_64-linux-gnu/9/include"
             ],
-            "defines": [
-                "__GNUC__",
-                "__KERNEL__",
-                "MODULE"
-            ],
+            "defines": [],
             "compilerPath": "/usr/bin/gcc",
             "cStandard": "gnu17",
             "cppStandard": "gnu++14",
